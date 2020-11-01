@@ -1,1 +1,162 @@
+/* Tanya Leenders - personal project to create an interactive CV.
+I used the knowledge I aquired after 1 month training at BeCode Liege.
+Project begins the first nov 2020 */
 
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* NAV */
+nav {
+    height: 10vh;
+    background: #363541;
+    box-shadow: 0px 10px 3px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__all-btns {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__all-btns p {
+    display: block;
+    background-color: #363541;
+    color: #efefef;
+}
+
+.nav__all-btns p:hover {
+    color: #5C52CA;
+    cursor: pointer;
+}
+
+/* ARTICLES: ALL INVISIBLE BUT ONE  */
+
+#about-text, #educ-text, #exp-text, #skills-text, #contact-text {
+    display: none;
+}
+
+#home-text {
+    display: flex;
+}
+
+/* general */
+#home-text, #about-text {
+    height: 90vh;
+    background: linear-gradient(270deg, #2E2D39 60%, rgba(54, 53, 65, 0.04) 100%),
+                url(https://zupimages.net/up/20/44/l1w5.jpeg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #efefef;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 200;
+}
+
+
+/* home */
+.home-text__name, .home-text__job {
+    margin: 20px 200px;
+}
+
+.home-text__name {
+    font-size: 4.5em;
+    font-weight: 300;
+}
+
+.home-text__job {
+    font-size: 3em;
+    font-weight: 200;
+}
+
+
+/* about */
+#about-text {
+    text-align: right;
+}
+
+.about-text__title, .about-text__par {
+    margin: 20px 200px;
+}
+.about-text__par {
+    width: 40em;
+    line-height: 2em;
+}
+
+
+/* education & experience */
+#educ-text, #exp-text {
+    height: 90vh;
+    background: linear-gradient(90deg, #2E2D39 50%, rgba(54, 53, 65, 0.04) 100%),
+                url(https://zupimages.net/up/20/44/4e0b.jpg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #efefef;
+}
+
+.educ-text__title, .educ-text__par, .exp-text__title, .exp-text__par {
+    margin: 20px 100px;
+}
+
+.educ-text__par, .exp-text__par {
+    line-height: 2em;
+}
+
+/* skills */
+#skills-text, #contact-text {
+    height: 90vh;
+    background: linear-gradient(270deg, #2E2D39 45%, rgba(54, 53, 65, 0.5) 100%),
+                url(https://zupimages.net/up/20/44/t78p.jpg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #efefef;
+}
+
+.skills-text__title,  .skills-text__list-container {
+    margin: 20px 100px;
+}
+
+.skills-text__list1, .skills-text__list2 {
+    list-style-type: none;
+    text-align: right;
+    line-height: 2em;
+    padding: 2em 0em;
+}
+
+.skills-text__list1 {
+    border-bottom: 1px solid #efefef;
+}
+
+/* contact */
+.contact-text__title, .contact-text__info {
+    margin: 20px 100px;
+    text-align: right;
+}
+.contact-text__info {
+    line-height: 2em;
+}
+
+.contact-text__media {
+    margin: 2em 100px;
+    width: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact-text__media__icon {
+    width: 50px;
+}
