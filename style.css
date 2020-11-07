@@ -9,13 +9,14 @@ Project begins the first nov 2020 */
 
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: #2E2D39;
 }
 
 /* NAV */
 nav {
-    height: 10vh;
+    height: 6em;
     background: #363541;
-    box-shadow: 0px 10px 3px black;
+    box-shadow: 0px 10px 3px #363541;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +39,7 @@ nav {
     cursor: pointer;
 }
 
-/* ARTICLES: ALL INVISIBLE BUT ONE  */
+/* ARTICLES */
 
 #about-text, #educ-text, #exp-text, #skills-text, #contact-text {
     display: none;
@@ -66,7 +67,7 @@ h2 {
 
 
 /* home */
-.home-text__name, .home-text__job {
+.home-text__name, .home-text__job, .home-text__par{
     margin: 20px 200px;
 }
 
@@ -80,23 +81,43 @@ h2 {
     font-weight: 200;
 }
 
+.home-text__par {
+    padding: 3em 0em;
+    font-size: 1.2em;
+}
+
 
 /* about */
 #about-text {
     text-align: right;
+    line-height: 2em;
 }
 
-.about-text__title, .about-text__par {
-    margin: 20px 200px;
+.about-text__title, .about-text__list  {
+    margin: 40px 200px;
 }
+
 .about-text__par {
-    width: 40em;
+    margin: 0px 200px;
+    width: 60%;
+}
+
+.about-text__list {
     line-height: 2em;
+    list-style-type: none;
+}
+
+.about-text__list__title {
+    font-size: 1.1em;
+}
+
+.about-text__list td {
+    padding-left: 4em;
 }
 
 
 /* education & experience */
-#educ-text, #exp-text {
+#exp-text {
     height: 90vh;
     background: linear-gradient(90deg, #2E2D39 50%, rgba(54, 53, 65, 0.04) 100%),
                 url(https://zupimages.net/up/20/44/4e0b.jpg);
@@ -106,11 +127,11 @@ h2 {
     color: #efefef;
 }
 
-.educ-text__title, .educ-text__par, .exp-text__title, .exp-text__par {
+.exp-text__title, .exp-text__educ, .exp-text__work {
     margin: 20px 100px;
 }
 
-.educ-text__par, .exp-text__par {
+.exp-text__educ, .exp-text__work {
     line-height: 2em;
 }
 
@@ -129,6 +150,11 @@ h2 {
     margin: 20px 100px;
 }
 
+.skills-text__list__title {
+    font-size: 1.1em;
+    padding-bottom: 2em;
+}
+
 .skills-text__list1, .skills-text__list2 {
     list-style-type: none;
     text-align: right;
@@ -145,18 +171,37 @@ h2 {
     margin: 20px 100px;
     text-align: right;
 }
+
 .contact-text__info {
     line-height: 2em;
+    font-size: 1.3em;
 }
 
 .contact-text__media {
     margin: 2em 100px;
-    width: 10em;
+    width: 13em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .contact-text__media__icon {
-    width: 50px;
+    width: 4em;
+}
+
+
+/* ANIMATIONS ON CLICK */
+/* 
+.animation-disappear{
+    animation: disappear 1s;
+} */
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
