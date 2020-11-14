@@ -57,7 +57,7 @@ contactBtn.addEventListener("click", function() {
     contactArt.style.display = "flex";
 })
 
-// TextScramble
+// TextScramble class creation
 
 class TextScramble {
   
@@ -139,14 +139,14 @@ class TextScramble {
     }
 }
 
-if (aboutArt.style.display === "flex") {
-    let textElement = document.querySelector("article > h2");
-}
+// say the text to scramble 
+let exploreCV = document.querySelector(".home-text__par").innerHTML;
+
+let textElement = document.querySelector(".home-text__par");
 let myTitleScramble = new TextScramble(textElement);
-let title = document.querySelector("article > h2").innerHTML;
 
 let next = () => {
-    myTitleScramble.setText(title).then(() => {
+    myTitleScramble.setText(exploreCV).then(() => {
     setTimeout(next, 3000)
 })
 }

@@ -32,10 +32,11 @@ nav {
     display: block;
     background-color: #363541;
     color: #efefef;
+    transition: .5s;
 }
 
 .nav__all-btns p:hover {
-    color: #5C52CA;
+    color: #bd8375;
     cursor: pointer;
 }
 
@@ -52,8 +53,10 @@ nav {
 /* general */
 #home-text, #about-text {
     height: 90vh;
-    background: linear-gradient(270deg, #2E2D39 60%, rgba(54, 53, 65, 0.04) 100%),
-                url(https://zupimages.net/up/20/44/l1w5.jpeg);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(46,45,57,0.6796919451374299) 20%, rgba(46,45,57,1) 45%),
+                url(images/DSC_0312%20cropped.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
@@ -93,7 +96,7 @@ h2 {
     line-height: 2em;
 }
 
-.about-text__title, .about-text__list  {
+.about-text__title, .about-text__tab  {
     margin: 40px 200px;
 }
 
@@ -102,25 +105,28 @@ h2 {
     width: 60%;
 }
 
-.about-text__list {
-    line-height: 2em;
+.about-text__tab {
+    line-height: 3em;
     list-style-type: none;
 }
 
-.about-text__list__title {
+.about-text__tab__title {
     font-size: 1.1em;
+    padding: 1em 0em;
 }
 
-.about-text__list td {
-    padding-left: 4em;
+.about-text__tab td {
+    padding-left: 6em;
 }
-
 
 /* education & experience */
 #exp-text {
     height: 90vh;
-    background: linear-gradient(90deg, #2E2D39 50%, rgba(54, 53, 65, 0.04) 100%),
-                url(https://zupimages.net/up/20/44/4e0b.jpg);
+    background: linear-gradient(270deg, rgba(2,0,36,0) 0%, rgba(46,45,57,0.6796919451374299) 25%, rgba(46,45,57,1) 45%),
+                url(images/DSC_0467%20cropped%20NB.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -138,32 +144,40 @@ h2 {
 /* skills */
 #skills-text, #contact-text {
     height: 90vh;
-    background: linear-gradient(270deg, #2E2D39 45%, rgba(54, 53, 65, 0.5) 100%),
-                url(https://zupimages.net/up/20/44/t78p.jpg);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(46,45,57,0.6796919451374299) 15%, rgba(46,45,57,1) 39%),
+                url(images/DSC_0033%20cropped.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     color: #efefef;
 }
 
-.skills-text__title,  .skills-text__list-container {
+.skills-text__title,  .skills-text__tab-container {
     margin: 20px 100px;
 }
 
-.skills-text__list__title {
+.skills-text__tab-container {
+    display: flex;
+}
+
+.skills-text__tab__title {
     font-size: 1.1em;
     padding-bottom: 2em;
 }
 
-.skills-text__list1, .skills-text__list2 {
-    list-style-type: none;
+.skills-text__tab1, .skills-text__tab2 {
+    line-height: 3em;
+    padding: 2em;
     text-align: right;
-    line-height: 2em;
-    padding: 2em 0em;
+}
+.skills-text__tab1 td, .skills-text__tab2 td {
+    padding-left: 4em;
 }
 
-.skills-text__list1 {
-    border-bottom: 1px solid #efefef;
+.skills-text__tab2 {
+    border-left: 1px solid #efefef;
 }
 
 /* contact */
@@ -187,21 +201,4 @@ h2 {
 
 .contact-text__media__icon {
     width: 4em;
-}
-
-
-/* ANIMATIONS ON CLICK */
-/* 
-.animation-disappear{
-    animation: disappear 1s;
-} */
-
-@keyframes disappear {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
 }
