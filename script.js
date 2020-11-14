@@ -66,26 +66,21 @@ class TextScramble {
       this.chars = '!<>-_\\/[]{}—=+*^?#____'
       this.update = this.update.bind(this) //recherche bind ??
     }
-   
 
     setText(newText) {
       let oldText = this.textElement.innerText // old text = innertext, pour choper les caractères
-     
       let length = Math.max(oldText.length, newText.length) // length = max de soit l'ancien soit le nouveau texte
-     
       let promise = new Promise((resolve) => this.resolve = resolve) //recherche promise????
-     
       this.queue = [] //creation tableau vide
      
       for (let i = 0; i < length; i++) {
         let from = oldText[i]
         let to = newText[i]
-        let start = Math.floor(Math.random() * 40)
-        let end = start + Math.floor(Math.random() * 40)
+        let start = Math.floor(Math.random() * 30)
+        let end = start + Math.floor(Math.random() * 30)
         // definir certains elements dans le tableau + math random
         this.queue.push({ from, to, start, end }) // push dans le tableau vide
       }
-     
      
       cancelAnimationFrame(this.frameRequest)
       this.frame = 0
@@ -99,41 +94,34 @@ class TextScramble {
       for (let i = 0, n = this.queue.length; i < n; i++) {
        
         let { from, to, start, end, char } = this.queue[i]
-       
         if (this.frame >= end) {
           complete++
           output += to
         }
-       
         else if (this.frame >= start) {
          
-          if (!char || Math.random() < 0.28) {
+          if (!char || Math.random() < 0.01) {
             char = this.randomChar()
             this.queue[i].char = char
           }
          
           output += `<span class="dud">${char}</span>`
         }
-       
         else {
           output += from
         }
       } // tout ça définit la variable output
      
-     
       this.textElement.innerHTML = output
-     
      
       if (complete === this.queue.length) {
         this.resolve()
       }
-     
       else {
         this.frameRequest = requestAnimationFrame(this.update)
         this.frame++
       }
     }
-   
     randomChar() {
       return this.chars[Math.floor(Math.random() * this.chars.length)]
     }
@@ -141,16 +129,61 @@ class TextScramble {
 
 // say the text to scramble 
 let exploreCV = document.querySelector(".home-text__par").innerHTML;
-
-let textElement = document.querySelector(".home-text__par");
-let myTitleScramble = new TextScramble(textElement);
-
-let next = () => {
-    myTitleScramble.setText(exploreCV).then(() => {
-    setTimeout(next, 3000)
-})
+let exploreCVElement = document.querySelector(".home-text__par");
+let exploreCVScramble = new TextScramble(exploreCVElement);
+let exploreCVNext = () => {
+  exploreCVScramble.setText(exploreCV).then(() => {
+  setTimeout(exploreCVNext, 4000)
+  })
 }
+exploreCVNext()
 
-next()
+let aboutTitle = document.querySelector(".about-text__title").innerHTML;
+let aboutTitleElement = document.querySelector(".about-text__title");
+let aboutTitleScramble = new TextScramble(aboutTitleElement);
+let aboutNext = () => {
+  aboutTitleScramble.setText(aboutTitle).then(() => {
+  setTimeout(aboutNext, 4000)
+  })
+}
+aboutNext() 
 
- 
+let expTitle = document.querySelector(".experience__title").innerHTML;
+let expTitleElement = document.querySelector(".experience__title");
+let expTitleScramble = new TextScramble(expTitleElement);
+let expNext = () => {
+  expTitleScramble.setText(expTitle).then(() => {
+  setTimeout(expNext, 4000)
+  })
+}
+expNext() 
+
+let educTitle = document.querySelector(".education__title").innerHTML;
+let educTitleElement = document.querySelector(".education__title");
+let educTitleScramble = new TextScramble(educTitleElement);
+let educNext = () => {
+  educTitleScramble.setText(educTitle).then(() => {
+  setTimeout(educNext, 4000)
+  })
+}
+educNext() 
+
+let skillsTitle = document.querySelector(".skills-text__title").innerHTML;
+let skillsTitleElement = document.querySelector(".skills-text__title");
+let skillsTitleScramble = new TextScramble(skillsTitleElement);
+let skillsNext = () => {
+  skillsTitleScramble.setText(skillsTitle).then(() => {
+  setTimeout(skillsNext, 4000)
+  })
+}
+skillsNext() 
+
+let contactTitle = document.querySelector(".contact-text__title").innerHTML;
+let contactTitleElement = document.querySelector(".contact-text__title");
+let contactTitleScramble = new TextScramble(contactTitleElement);
+let contactNext = () => {
+  contactTitleScramble.setText(contactTitle).then(() => {
+  setTimeout(contactNext, 4000)
+  })
+}
+contactNext() 

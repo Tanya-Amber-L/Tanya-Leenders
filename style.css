@@ -169,15 +169,19 @@ h2 {
 
 .skills-text__tab1, .skills-text__tab2 {
     line-height: 3em;
-    padding: 2em;
     text-align: right;
 }
 .skills-text__tab1 td, .skills-text__tab2 td {
     padding-left: 4em;
 }
 
+.skills-text__tab1 {
+    padding: 2em 5em 2em 2em;
+}
+
 .skills-text__tab2 {
     border-left: 1px solid #efefef;
+    padding: 2em 0em 2em 2em;
 }
 
 /* contact */
