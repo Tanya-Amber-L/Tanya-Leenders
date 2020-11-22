@@ -2,7 +2,10 @@
 // I used the knowledge I aquired after 1 month training at BeCode Liege.
 // Project begins the first nov 2020
 
-// Navbar clicks: text changes
+
+
+// Navbar clicks: when you click on a section's name, the current one disappears and the one you want becomes visible
+// TODO: find a way to get this part of the code shorter
 
 let homeBtn = document.getElementById("btnHome");
 let aboutBtn = document.getElementById("btnAbout");
@@ -58,6 +61,8 @@ contactBtn.addEventListener("click", function() {
 })
 
 // TextScramble class creation
+// Inspired by codePen: https://codepen.io/soulwire/pen/mErPAK?editors=1010
+// TODO: create this code more personal, less like the link above. Get the same effect with maybe sipler functions?
 
 class TextScramble {
   
@@ -127,7 +132,9 @@ class TextScramble {
     }
 }
 
-// say the text to scramble 
+// say the text to scramble
+// TODO: find a way to get this part of the code shorter? 
+
 let exploreCV = document.querySelector(".home-text__par").innerHTML;
 let exploreCVElement = document.querySelector(".home-text__par");
 let exploreCVScramble = new TextScramble(exploreCVElement);
