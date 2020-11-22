@@ -13,3 +13,5 @@ I used the knowledge I aquired after __1 month__ training at BeCode Liege.
 + HTML
 + CSS
 + JavaScript
+
+[The url of th CV](https://tanya-amber-l.github.io/Interactive-CV/)
