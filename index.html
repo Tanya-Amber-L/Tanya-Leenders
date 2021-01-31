@@ -1,13 +1,11 @@
-<!-- Tanya Leenders - personal project to create an interactive CV.
-I used the knowledge I aquired after 1 month training at BeCode Liege.
-Project begins the first nov 2020-->
+<!-- Tanya Leenders - Curriculum Vitae and Portfolio-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae</title>
+    <title> Tanya Leenders Curriculum Vitae</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -15,118 +13,135 @@ Project begins the first nov 2020-->
 
     <!-- NAVIGATION -->
     <nav>
-        <div class="nav__all-btns">
-            <p id="btnHome">Home</p>
-            <p id="btnAbout">About Me</p>
-            <p id="btnExp">Education / Experience</p>
-            <p id="btnSkills">Skills</p>
-            <p id="btnContact">Contact Me</p>
-        </div>
-        
+        <div class="nav__skills">Skills</div>
+        <div class="nav__exp">Experience</div>
+        <div class="nav__portfolio">Portfolio</div>
+        <div class="nav__contact">Contact</div>
     </nav>
 
     <!-- EACH ARTICLE -->
-    <section class="container">
+    <main>
 
-        <article id="home-text">
-            <h1 class="home-text__name">Tanya Leenders</h1>
-            <h2 class="home-text__job">Web Developer</h2>
-            <p class="home-text__par">I'll let you explore my interactive Curriculum Vitae</p>
-        </article>
-
-        <article id="about-text">
-            <h2 class="about-text__title">About me</h2>
-            <p class="about-text__par">Born in november 2002, I'm a young motivated woman.</p>
-            <p class="about-text__par">Being an infographist, I can manipulate Adobe Illustrator, Photoshop and Indesign.</p>
-            <p class="about-text__par">I am currently learning to program  in HTML, CSS and JavaScript. </p>
-            <p class="about-text__par">This CV is an example of my capacities after 1 month of learning.</p>
-            <table class="about-text__tab"> 
-                <tr>
-                    <th class="about-text__tab__title" colspan="2"> Soft skills :</th>
-                </tr>
-                <tr class="about-text__tab__row1">
-                    <td>Team Player</td>
-                    <td>Reliable</td>
-                </tr>
-                <tr class="about-text__tab__row2">
-                    <td>Honest</td>
-                    <td>Self Learner</td>
-                </tr>
-            </table>
-        </article>
-
-        <article id="exp-text">
-            <h2 class="exp-text__title education__title">Education</h2>
-            <ul class="exp-text__educ">
-                <li>Infographist diploma at Athénée Visé-Glons - June 2020. 
-                    <p>Manipulation of Adobe Illustrator, Photoshop, Indesign. Conception of Graphic projects, packagings, mockups.</p>
-                </li>
-                <li>First Aid diploma</li>
-            </ul>
-
-            <h2 class="exp-text__title experience__title">Experience</h2>
-            <ul class="exp-text__work">
-                <li>Formation at BeCode Liège - October 2020 to April 2021. Soon to be Web Developer.</li>
-                <li>Internship at Laserlux, as Graphist - January to February 2020. Conception of graphic projects to be engraved in different supports.</li>
-                <li>Internship at OmiPub, as Graphist - March to April 2019. Conception of graphic projects to be printed (advertisings, visit cards, magazines).</li>
-                <li>Internship at C2I Guadeloupe - March 2017. Discover the software development environment.</li>
-            </ul>
-        </article>
-
-        <article id="skills-text">
-            <h2 class="skills-text__title">Skills</h2>
-            <div class="skills-text__tab-container">
-                <table class="skills-text__tab1"> 
-                    <tr>
-                       <th class="skills-text__tab__title" colspan="2"><strong> Languages :</strong></th>
-                    </tr>
-                    <tr>
-                        <td>French</td>
-                        <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
-                    </tr>
-                    <tr>
-                        <td>English</td>
-                        <td>&#9733;&#9733;&#9733;&#9733;</td>
-                    </tr>
-                </table>
-                <table class="skills-text__tab2">
-                    <tr>
-                        <th class="skills-text__tab__title" colspan="2"><strong> Programming Languages :</strong></th>
-                    </tr>
-                    <tr>
-                        <td>HTML</td>
-                        <td>&#9733;&#9733; (To be continued)</td>
-                    </tr>
-                    <tr>
-                        <td>CSS</td>
-                        <td>&#9733;&#9733; (To be continued)</td>
-                    </tr>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>&#9733; (To be continued)</td>
-                    </tr>
-                    <tr>
-                        <td>(To be continued)</td>
-                        <td>(To be continued)</td>
-                    </tr>
-                </table>
+        <article class="presentation">
+            <h1>Tanya Leenders</h1>
+            <h2>Junior Web Developer</h2>
+            <div class="presentation__social">
+                <a href="https://github.com/Tanya-Amber-L" class="presentation__social__link">
+                    <img src="" alt="">
+                </a>
+                <a href="" class="presentation__social__link">
+                    <img src="" alt="">
+                </a>
+                <a href="" class="presentation__social__link">
+                    <img src="" alt="">
+                </a>
+                <a href="" class="presentation__social__link">
+                    <img src="" alt="">
+                </a>
+                <a href="" class="presentation__social__link">
+                    <img src="" alt="">
+                </a>
             </div>
         </article>
 
-        <article id="contact-text">
-            <h2 class="contact-text__title">Contact</h2>
-            <div class="contact-text__info">
-                <p>0487 02 64 19</p>
-                <p>tanya.leenders@gmail.com</p>
-                <p>Rue Basse 38, 3798 Fourons</p>
-            </div>  
-            <div class="contact-text__media">
-                <a href="https://www.linkedin.com/in/tanya-leenders-09652b1b6/"><img class="contact-text__media__icon" src="https://zupimages.net/up/20/44/ohcy.png" alt=""></a>
-                <a href="https://github.com/Tanya-Amber-L"><img class="contact-text__media__icon" src="https://zupimages.net/up/20/44/g3xw.png" alt=""></a>
+        <article class="quote">
+            <div class="quote__bar">&horbar;</div>
+            <div class="quote__txt">I’m a motivated young woman, infographist and web developer. 
+                I’m seeking opportunities to make me grow in my job and personnal life.</div>
+            <div class="quote__bar">&horbar;</div>
+        </article>
+
+        <article class="plus-infos">
+            <div class="plus-infos__lang">
+                <div class="plus-infos__lang__fr">
+                    <p class="title">French</p>
+                    <p class="detail">Native Language</p>
+                </div>
+                <div class="plus-infos__lang__eng">
+                    <p class="title">English</p>
+                    <p class="detail">Full professionnal capacity</p>
+                </div>
+            </div>
+            <div class="plus-infos__hobb"></div>
+        </article>
+
+        <article class="skills">
+            <div class="skills__tech">
+                <p> <div class="middot">&middot;</div> Git</p>
+                <p> <div class="middot">&middot;</div> HTML</p>
+                <p> <div class="middot">&middot;</div> CSS/SCSS</p>
+                <p> <div class="middot">&middot;</div> Bootstrap</p>
+                <p> <div class="middot">&middot;</div> JavaScript</p>
+                <p> <div class="middot">&middot;</div> React</p>
+                <p> <div class="middot">&middot;</div> NodeJS</p>
+                <p> <div class="middot">&middot;</div> PHP</p>
+                <p> <div class="middot">&middot;</div> MySQL</p>
+                <p> <div class="middot">&middot;</div> WordPress</p>
+            </div>
+            <div class="skills__graph">
+                <p> <div class="middot">&middot;</div> Adobe Illustrator</p>
+                <p> <div class="middot">&middot;</div> Adobe Photoshop</p>
+                <p> <div class="middot">&middot;</div> Adobe InDesign</p>
+                <p> <div class="middot">&middot;</div> Visual Identity</p>
+                <p> <div class="middot">&middot;</div> Mockups</p>
+                <p> <div class="middot">&middot;</div> Packagings</p>
+            </div>
+            <div class="skills__soft">
+                <p> <div class="middot">&middot;</div> Reliable</p>
+                <p> <div class="middot">&middot;</div> Honest</p>
+                <p> <div class="middot">&middot;</div> Team Player</p>
+                <p> <div class="middot">&middot;</div> Solution Mindset</p>
             </div>
         </article>
 
-    </section>
+        <article class="exp">
+            <div class="exp__diploma">
+                <div class="exp__block">
+                    <p class="date">2017</p>
+                    <p class="description">First Aid Diploma.</p>
+                </div>
+                <div class="exp__block">
+                    <p class="date">June 2020</p>
+                    <p class="description">Infographist Diploma.</p>
+                    <p class="activity"> <div class="middot">&middot;</div> At Athénée Royal de Visé.</p>
+                </div>
+            </div>
+            <div class="exp__internship">
+                <div class="exp__block">
+                    <p class="date">March - Apr 2019</p>
+                    <p class="description">At Omnipub, Rocourt, as Infographist.</p>
+                    <p class="activity"> <div class="middot">&middot;</div> Created multiple designs to be printed : advertisings, visit cards, magazines.</p>
+                </div>
+                <div class="exp__block">
+                    <p class="date">Jan - Feb 2020</p>
+                    <p class="description">At Laserlux, Liège, as infographist.</p>
+                    <p class="activity"><div class="middot">&middot;</div> Created multiple designs to be engraved on different supports.</p>
+                    <p class="activity"><div class="middot">&middot;</div> Learned to manipulate engravement machines.</p>
+                </div>
+            </div>
+            <div class="exp__pro">
+                <div class="exp__block">
+                    <p class="date">Feb - March 2020</p>
+                    <p class="activity"><div class="middot">&middot;</div> Created logo, graphic chart, and then website banner for a client in Switzerland via Fiverr.</p>
+                </div>
+                <div class="exp__block">
+                    <p class="date">Sept 2020 - Apr 2021</p>
+                    <p class="description">BeCode intensive 7-month training.</p>
+                    <p class="activity"><div class="middot">&middot;</div>Cultivated essential soft skills and tech skills. To see some of the projects I worked on, you can consult my website.</p>
+                    <p class="activity"><div class="middot">&middot;</div>Made regular Tech Talks, in French and English.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="portfolio">
+            
+        </article>
+
+        <article class="contact">
+
+        </article>
+
+    </main>
 
     <script type="text/javascript" src="script.js"></script>
 
