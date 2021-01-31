@@ -1,17 +1,17 @@
-# Interactive-CV
+# Tanya Leenders - CV
 
-Personal project to create an interactive CV.
-I used the knowledge I aquired after __1 month__ training at BeCode Liege.
-*Project begins the first nov 2020*
+
+Curriculum Vitae and Portfolio
 
 
 --- 
 
 
-### Languages used:
+### I Used:
 
 + HTML
-+ CSS
++ SCSS
 + JavaScript
++ AOS Library
 
-[The url of th CV](https://tanya-amber-l.github.io/Interactive-CV/)
+[Here's the url](https://tanya-amber-l/)
