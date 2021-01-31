@@ -1,0 +1,102 @@
+$primary: #2b3343;
+$font-primary: #ebebeb;
+$blue: #1863b4;
+$purple: #810083;
+
+@mixin flex($direction, $content, $items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+}
+
+/* --------------- GENERAL -------------- */
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    color: $font-primary;
+    font-family: "Poppins", sans-serif;
+}
+.presentation, .quote, .skills, .exp, .portfolio {
+    padding: 3em 15em;
+}
+
+/* ----------------- NAV ----------------*/
+nav {
+    height: 5em;
+    background-color: lighten($primary, 10);
+    @include flex(row, center, center);
+    & div {
+        padding: 0 2em;
+        font-size: 1.2em;
+        font-weight: 200;
+    }
+}
+
+/* ------------- PRESENTATION ----------------*/
+.presentation {
+    height: 55em;
+    background-color: $primary;
+    @include flex(row, space-between, center);
+    &__img {
+        padding: 3em 0;
+        margin-left: -15em;
+    }
+    &__content h1 {
+        font-size: 4em;
+        font-weight: 500;
+    }
+    &__content h2 {
+        font-size: 2em;
+        font-weight: 200;
+    }
+}
+
+/* ---------------- QUOTE ----------------*/
+.quote {
+    background-color: lighten($primary, 10);
+    height: 5em;
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: 300;
+    @include flex(row, center, center);
+    text-align: center;
+}
+
+/* ---------------- SKILLS ----------------*/
+.skills {
+    background-color: $primary;
+    padding-bottom: 20em;
+    position: relative;
+    @include flex(row, space-between, center);
+    & .plus-infos__fr, & .plus-infos__eng {
+        padding: 1em 0;
+        & .title {
+            font-size: 1.3em;
+            font-weight: 500;
+            color: $blue;
+        }
+    }
+    & .skills-block{
+        position: absolute;
+        top: 25em;
+        @include flex(row, space-between, center);
+        &__tech, &__graph, &__soft {
+            background-color: darken($primary, 3);
+            padding: 2em;
+            border: none;
+            border-radius: 10px;
+            & div {
+                @include flex(row, center, center);
+            }
+        } 
+    }
+}
+
+/* ------------- EXPERIENCE ----------------*/
+.exp {
+    padding-top: 10em;
+    background-color: lighten($primary, 10);
+}

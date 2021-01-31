@@ -1,0 +1,110 @@
+/* --------------- GENERAL -------------- */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #ebebeb;
+  font-family: "Poppins", sans-serif;
+}
+
+.presentation, .quote, .skills, .exp, .portfolio {
+  padding: 3em 15em;
+}
+
+/* ----------------- NAV ----------------*/
+nav {
+  height: 5em;
+  background-color: #3f4b62;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav div {
+  padding: 0 2em;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+/* ------------- PRESENTATION ----------------*/
+.presentation {
+  height: 55em;
+  background-color: #2b3343;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.presentation__img {
+  padding: 3em 0;
+  margin-left: -15em;
+}
+.presentation__content h1 {
+  font-size: 4em;
+  font-weight: 500;
+}
+.presentation__content h2 {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+/* ---------------- QUOTE ----------------*/
+.quote {
+  background-color: #3f4b62;
+  height: 5em;
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------------- SKILLS ----------------*/
+.skills {
+  background-color: #2b3343;
+  padding-bottom: 20em;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills .plus-infos__fr, .skills .plus-infos__eng {
+  padding: 1em 0;
+}
+.skills .plus-infos__fr .title, .skills .plus-infos__eng .title {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #1863b4;
+}
+.skills .skills-block {
+  position: absolute;
+  top: 25em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills .skills-block__tech, .skills .skills-block__graph, .skills .skills-block__soft {
+  background-color: #252c3a;
+  padding: 2em;
+  border: none;
+  border-radius: 10px;
+}
+.skills .skills-block__tech div, .skills .skills-block__graph div, .skills .skills-block__soft div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------- EXPERIENCE ----------------*/
+.exp {
+  padding-top: 10em;
+  background-color: #3f4b62;
+}
