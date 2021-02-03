@@ -10,7 +10,7 @@ body {
 }
 
 .presentation, .quote, .skills, .exp, .portfolio {
-  padding: 3em 15em;
+  padding: 6em 15em;
 }
 
 /* ----------------- NAV ----------------*/
@@ -67,44 +67,92 @@ nav div {
 /* ---------------- SKILLS ----------------*/
 .skills {
   background-color: #2b3343;
-  padding-bottom: 20em;
+  padding-bottom: 5em;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-.skills .plus-infos__fr, .skills .plus-infos__eng {
+.skills .plus-infos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.skills .plus-infos__lang {
+  width: 50%;
+}
+.skills .plus-infos__lang__fr, .skills .plus-infos__lang__eng {
   padding: 1em 0;
 }
-.skills .plus-infos__fr .title, .skills .plus-infos__eng .title {
-  font-size: 1.3em;
-  font-weight: 500;
+.skills .plus-infos__lang__fr .title, .skills .plus-infos__lang__eng .title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #1863b4;
+  padding-bottom: 0.5em;
+}
+.skills .plus-infos__hobb {
+  padding: 1em 0;
+  width: 50%;
+}
+.skills .plus-infos__hobb .title {
+  font-size: 1.5em;
+  font-weight: 700;
   color: #1863b4;
 }
-.skills .skills-block {
-  position: absolute;
-  top: 25em;
+.skills__block {
+  width: 100%;
+  position: relative;
+  top: 10em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.skills .skills-block__tech, .skills .skills-block__graph, .skills .skills-block__soft {
+.skills__block__tech, .skills__block__graph, .skills__block__soft {
+  height: 17em;
+  width: 15em;
   background-color: #252c3a;
-  padding: 2em;
+  padding: 3em;
   border: none;
   border-radius: 10px;
 }
-.skills .skills-block__tech div, .skills .skills-block__graph div, .skills .skills-block__soft div {
+.skills__block__tech div, .skills__block__graph div, .skills__block__soft div {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.skills__block__tech .title, .skills__block__graph .title, .skills__block__soft .title {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #ebebeb;
+  padding-bottom: 0.5em;
 }
 
 /* ------------- EXPERIENCE ----------------*/
 .exp {
   padding-top: 10em;
   background-color: #3f4b62;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.exp__title {
+  font-size: 3em;
+  font-weight: 600;
+  color: #ebebeb;
+}
+.exp__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.exp__content__diploma, .exp__content__internship, .exp__content__pro {
+  width: 33%;
 }

@@ -9,6 +9,11 @@ $purple: #810083;
     justify-content: $content;
     align-items: $items;
 }
+@mixin title($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
 
 /* --------------- GENERAL -------------- */
 * {
@@ -20,7 +25,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 .presentation, .quote, .skills, .exp, .portfolio {
-    padding: 3em 15em;
+    padding: 6em 15em;
 }
 
 /* ----------------- NAV ----------------*/
@@ -68,28 +73,50 @@ nav {
 /* ---------------- SKILLS ----------------*/
 .skills {
     background-color: $primary;
-    padding-bottom: 20em;
+    padding-bottom: 5em;
     position: relative;
     @include flex(row, space-between, center);
-    & .plus-infos__fr, & .plus-infos__eng {
-        padding: 1em 0;
-        & .title {
-            font-size: 1.3em;
-            font-weight: 500;
-            color: $blue;
+    flex-wrap: wrap;
+
+    & .plus-infos {
+        width: 100%;
+        @include flex(row, space-between, flex-start);
+        &__lang {
+            width: 50%;
+            &__fr, &__eng {
+                padding: 1em 0;
+                & .title {
+                    @include title(1.5em, 700, $blue);
+                    padding-bottom: 0.5em;
+                } 
+            }
+        }
+        &__hobb {
+            padding: 1em 0;
+            width: 50%;
+            & .title {
+                @include title(1.5em, 700, $blue);
+            }
         }
     }
-    & .skills-block{
-        position: absolute;
-        top: 25em;
+    &__block{
+        width: 100%;
+        position: relative;
+        top: 10em;
         @include flex(row, space-between, center);
         &__tech, &__graph, &__soft {
+            height: 17em;
+            width: 15em;
             background-color: darken($primary, 3);
-            padding: 2em;
+            padding: 3em;
             border: none;
             border-radius: 10px;
             & div {
-                @include flex(row, center, center);
+                @include flex(row, flex-start, flex-start);
+            }
+            & .title {
+                @include title(2.5em, 600, $font-primary);
+                padding-bottom: 0.5em;
             }
         } 
     }
@@ -99,4 +126,15 @@ nav {
 .exp {
     padding-top: 10em;
     background-color: lighten($primary, 10);
+    @include flex(column, flex-start, flex-start);
+    &__title {
+        @include title(3em, 600, $font-primary);
+    }
+    &__content {
+        @include flex(row, space-between, flex-start);
+        &__diploma, &__internship, &__pro {
+            width: 33%;
+        }
+    }
+    
 }
