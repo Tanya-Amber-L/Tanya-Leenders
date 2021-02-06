@@ -9,8 +9,14 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.presentation, .quote, .skills, .exp, .portfolio {
-  padding: 6em 15em;
+.skills, .exp, .portfolio {
+  padding: 6em 12em;
+}
+
+.middot {
+  color: #2c74c2;
+  padding: 0 0.5em;
+  font-size: 1.2em;
 }
 
 /* ----------------- NAV ----------------*/
@@ -30,31 +36,57 @@ nav div {
 
 /* ------------- PRESENTATION ----------------*/
 .presentation {
+  padding: 0em 15em;
   height: 55em;
-  background-color: #2b3343;
+  background-image: url(./../images/gradient-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.presentation__content {
+  width: 45%;
+}
+.presentation__content__h1 {
+  font-size: 4em;
+  font-weight: 500;
+}
+.presentation__content__h2 {
+  font-size: 2em;
+  font-weight: 200;
+}
+.presentation__content__social {
+  padding: 2em 0;
+  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.presentation__img {
-  padding: 3em 0;
-  margin-left: -15em;
+.presentation__content__social__link {
+  background-image: linear-gradient(45deg, #2c74c2, #810083);
+  border-radius: 50%;
+  width: 3.5em;
+  height: 3.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
-.presentation__content h1 {
-  font-size: 4em;
-  font-weight: 500;
-}
-.presentation__content h2 {
-  font-size: 2em;
-  font-weight: 200;
+.presentation__content__social__link i {
+  font-size: 1.7em;
+  color: #ebebeb;
 }
 
 /* ---------------- QUOTE ----------------*/
 .quote {
+  padding: 3em 12em;
   background-color: #3f4b62;
   height: 5em;
-  font-size: 1.3em;
+  font-size: 1.6em;
   font-style: italic;
   font-weight: 300;
   display: flex;
@@ -67,7 +99,7 @@ nav div {
 /* ---------------- SKILLS ----------------*/
 .skills {
   background-color: #2b3343;
-  padding-bottom: 5em;
+  padding-bottom: 0;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -89,9 +121,9 @@ nav div {
   padding: 1em 0;
 }
 .skills .plus-infos__lang__fr .title, .skills .plus-infos__lang__eng .title {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #1863b4;
+  font-size: 2em;
+  font-weight: 500;
+  color: #ebebeb;
   padding-bottom: 0.5em;
 }
 .skills .plus-infos__hobb {
@@ -99,22 +131,24 @@ nav div {
   width: 50%;
 }
 .skills .plus-infos__hobb .title {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #1863b4;
+  font-size: 2em;
+  font-weight: 500;
+  color: #ebebeb;
+  padding-bottom: 0.5em;
 }
 .skills__block {
   width: 100%;
   position: relative;
-  top: 10em;
+  top: 7em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .skills__block__tech, .skills__block__graph, .skills__block__soft {
-  height: 17em;
-  width: 15em;
+  line-height: 2.3em;
+  height: 25em;
+  width: 20em;
   background-color: #252c3a;
   padding: 3em;
   border: none;
@@ -128,14 +162,15 @@ nav div {
 }
 .skills__block__tech .title, .skills__block__graph .title, .skills__block__soft .title {
   font-size: 2.5em;
-  font-weight: 600;
-  color: #ebebeb;
+  font-weight: 700;
+  color: #2c74c2;
+  padding-bottom: 0.5em;
   padding-bottom: 0.5em;
 }
 
 /* ------------- EXPERIENCE ----------------*/
 .exp {
-  padding-top: 10em;
+  padding-top: 15em;
   background-color: #3f4b62;
   display: flex;
   flex-direction: column;
@@ -146,6 +181,7 @@ nav div {
   font-size: 3em;
   font-weight: 600;
   color: #ebebeb;
+  padding-bottom: 0.5em;
 }
 .exp__content {
   display: flex;

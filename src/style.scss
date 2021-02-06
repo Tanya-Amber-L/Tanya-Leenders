@@ -1,6 +1,6 @@
 $primary: #2b3343;
 $font-primary: #ebebeb;
-$blue: #1863b4;
+$blue: #2c74c2;
 $purple: #810083;
 
 @mixin flex($direction, $content, $items) {
@@ -13,6 +13,7 @@ $purple: #810083;
     font-size: $size;
     font-weight: $weight;
     color: $color;
+    padding-bottom: 0.5em;
 }
 
 /* --------------- GENERAL -------------- */
@@ -24,8 +25,13 @@ body {
     color: $font-primary;
     font-family: "Poppins", sans-serif;
 }
-.presentation, .quote, .skills, .exp, .portfolio {
-    padding: 6em 15em;
+.skills, .exp, .portfolio {
+    padding: 6em 12em;
+}
+.middot {
+    color: $blue;
+    padding: 0 0.5em;
+    font-size: 1.2em;
 }
 
 /* ----------------- NAV ----------------*/
@@ -42,28 +48,48 @@ nav {
 
 /* ------------- PRESENTATION ----------------*/
 .presentation {
+    padding: 0em 15em;
     height: 55em;
-    background-color: $primary;
-    @include flex(row, space-between, center);
-    &__img {
-        padding: 3em 0;
-        margin-left: -15em;
-    }
-    &__content h1 {
-        font-size: 4em;
-        font-weight: 500;
-    }
-    &__content h2 {
-        font-size: 2em;
-        font-weight: 200;
+    background-image: url(./../images/gradient-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex(row, flex-end, center);
+    &__content { 
+        width: 45%;
+        &__h1 {
+            font-size: 4em;
+            font-weight: 500;
+        }
+        &__h2 {
+            font-size: 2em;
+            font-weight: 200;
+        }
+        &__social {
+            padding: 2em 0;
+            width: 60%;
+            @include flex(row, space-between, center);
+            &__link {
+                background-image: linear-gradient(45deg, $blue, $purple);
+                border-radius: 50%;
+                width: 3.5em;
+                height: 3.5em;
+                @include flex(row, center, center);
+                text-decoration: none;
+                & i {
+                    font-size: 1.7em;
+                    color: $font-primary;
+                }
+            }
+        }
     }
 }
 
 /* ---------------- QUOTE ----------------*/
 .quote {
+    padding: 3em 12em;
     background-color: lighten($primary, 10);
     height: 5em;
-    font-size: 1.3em;
+    font-size: 1.6em;
     font-style: italic;
     font-weight: 300;
     @include flex(row, center, center);
@@ -73,11 +99,10 @@ nav {
 /* ---------------- SKILLS ----------------*/
 .skills {
     background-color: $primary;
-    padding-bottom: 5em;
+    padding-bottom: 0;
     position: relative;
     @include flex(row, space-between, center);
     flex-wrap: wrap;
-
     & .plus-infos {
         width: 100%;
         @include flex(row, space-between, flex-start);
@@ -86,8 +111,7 @@ nav {
             &__fr, &__eng {
                 padding: 1em 0;
                 & .title {
-                    @include title(1.5em, 700, $blue);
-                    padding-bottom: 0.5em;
+                    @include title(2em, 500, $font-primary);
                 } 
             }
         }
@@ -95,18 +119,19 @@ nav {
             padding: 1em 0;
             width: 50%;
             & .title {
-                @include title(1.5em, 700, $blue);
+                @include title(2em, 500, $font-primary);
             }
         }
     }
     &__block{
         width: 100%;
         position: relative;
-        top: 10em;
+        top: 7em;
         @include flex(row, space-between, center);
         &__tech, &__graph, &__soft {
-            height: 17em;
-            width: 15em;
+            line-height: 2.3em;
+            height: 25em;
+            width: 20em;
             background-color: darken($primary, 3);
             padding: 3em;
             border: none;
@@ -115,7 +140,7 @@ nav {
                 @include flex(row, flex-start, flex-start);
             }
             & .title {
-                @include title(2.5em, 600, $font-primary);
+                @include title(2.5em, 700, $blue);
                 padding-bottom: 0.5em;
             }
         } 
@@ -124,7 +149,7 @@ nav {
 
 /* ------------- EXPERIENCE ----------------*/
 .exp {
-    padding-top: 10em;
+    padding-top: 15em;
     background-color: lighten($primary, 10);
     @include flex(column, flex-start, flex-start);
     &__title {
