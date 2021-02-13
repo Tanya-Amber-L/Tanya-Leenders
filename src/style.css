@@ -7,10 +7,15 @@
 body {
   color: #ebebeb;
   font-family: "Poppins", sans-serif;
+  background-image: url(../images/purple-bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+  padding: 0 3em;
 }
 
-.skills, .exp, .portfolio {
-  padding: 6em 12em;
+.presentation, .skills, .exp, .portfolio {
+  padding: 4em 8em;
 }
 
 .middot {
@@ -21,30 +26,41 @@ body {
 
 /* ----------------- NAV ----------------*/
 nav {
-  height: 5em;
-  background-color: #3f4b62;
+  height: 7em;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 nav div {
-  padding: 0 2em;
+  padding: 0.5em 2em;
   font-size: 1.2em;
   font-weight: 200;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav div:hover {
+  background-color: #ebebeb48;
+  box-shadow: 0px 5px 10px #171b24;
 }
 
 /* ------------- PRESENTATION ----------------*/
 .presentation {
-  padding: 0em 15em;
-  height: 55em;
-  background-image: url(./../images/gradient-background.png);
+  height: 45em;
+  background-color: #2b3343;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #171b24;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+}
+.presentation__img {
+  width: 45%;
 }
 .presentation__content {
   width: 45%;
@@ -52,10 +68,11 @@ nav div {
 .presentation__content__h1 {
   font-size: 4em;
   font-weight: 500;
+  text-transform: uppercase;
 }
 .presentation__content__h2 {
-  font-size: 2em;
-  font-weight: 200;
+  font-size: 2.5em;
+  font-weight: 300;
 }
 .presentation__content__social {
   padding: 2em 0;
@@ -68,6 +85,7 @@ nav div {
 .presentation__content__social__link {
   background-image: linear-gradient(45deg, #2c74c2, #810083);
   border-radius: 50%;
+  box-shadow: 0px 5px 10px #171b24;
   width: 3.5em;
   height: 3.5em;
   display: flex;
@@ -75,6 +93,10 @@ nav div {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  transition: 0.3s;
+}
+.presentation__content__social__link:hover {
+  box-shadow: 0px 2px 2px #171b24;
 }
 .presentation__content__social__link i {
   font-size: 1.7em;
@@ -84,7 +106,7 @@ nav div {
 /* ---------------- QUOTE ----------------*/
 .quote {
   padding: 3em 12em;
-  background-color: #3f4b62;
+  background-color: transparent;
   height: 5em;
   font-size: 1.6em;
   font-style: italic;
@@ -99,6 +121,7 @@ nav div {
 /* ---------------- SKILLS ----------------*/
 .skills {
   background-color: #2b3343;
+  border-radius: 10px 10px 0 0;
   padding-bottom: 0;
   position: relative;
   display: flex;
@@ -114,23 +137,11 @@ nav div {
   justify-content: space-between;
   align-items: flex-start;
 }
-.skills .plus-infos__lang {
+.skills .plus-infos__fr, .skills .plus-infos__eng {
   width: 50%;
-}
-.skills .plus-infos__lang__fr, .skills .plus-infos__lang__eng {
   padding: 1em 0;
 }
-.skills .plus-infos__lang__fr .title, .skills .plus-infos__lang__eng .title {
-  font-size: 2em;
-  font-weight: 500;
-  color: #ebebeb;
-  padding-bottom: 0.5em;
-}
-.skills .plus-infos__hobb {
-  padding: 1em 0;
-  width: 50%;
-}
-.skills .plus-infos__hobb .title {
+.skills .plus-infos__fr .title, .skills .plus-infos__eng .title {
   font-size: 2em;
   font-weight: 500;
   color: #ebebeb;
@@ -172,6 +183,8 @@ nav div {
 .exp {
   padding-top: 15em;
   background-color: #3f4b62;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 5px 10px #171b24;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -191,4 +204,10 @@ nav div {
 }
 .exp__content__diploma, .exp__content__internship, .exp__content__pro {
   width: 33%;
+}
+.exp__content__diploma__title, .exp__content__internship__title, .exp__content__pro__title {
+  font-size: 2em;
+  font-weight: 300;
+  color: #2c74c2;
+  padding-bottom: 0.5em;
 }

@@ -24,9 +24,15 @@ $purple: #810083;
 body {
     color: $font-primary;
     font-family: "Poppins", sans-serif;
+    background-image: url(../images/purple-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    padding: 0 3em;
+    // This creates a blurred fixed background to my content
 }
-.skills, .exp, .portfolio {
-    padding: 6em 12em;
+.presentation, .skills, .exp, .portfolio {
+    padding: 4em 8em;
 }
 .middot {
     color: $blue;
@@ -36,33 +42,45 @@ body {
 
 /* ----------------- NAV ----------------*/
 nav {
-    height: 5em;
-    background-color: lighten($primary, 10);
+    height: 7em;
+    background-color: transparent;
     @include flex(row, center, center);
     & div {
-        padding: 0 2em;
+        padding: 0.5em 2em;
         font-size: 1.2em;
         font-weight: 200;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            background-color: #ebebeb48;
+            box-shadow: 0px 5px 10px darken($primary, 10);;
+        }
     }
 }
 
 /* ------------- PRESENTATION ----------------*/
 .presentation {
-    padding: 0em 15em;
-    height: 55em;
-    background-image: url(./../images/gradient-background.png);
+    height: 45em;
+    background-color: $primary;
     background-repeat: no-repeat;
     background-size: cover;
-    @include flex(row, flex-end, center);
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px darken($primary, 10);
+    @include flex(row, space-between, center);
+    &__img{
+        width: 45%;
+    }
     &__content { 
         width: 45%;
         &__h1 {
             font-size: 4em;
             font-weight: 500;
+            text-transform: uppercase;
         }
         &__h2 {
-            font-size: 2em;
-            font-weight: 200;
+            font-size: 2.5em;
+            font-weight: 300;
         }
         &__social {
             padding: 2em 0;
@@ -71,10 +89,15 @@ nav {
             &__link {
                 background-image: linear-gradient(45deg, $blue, $purple);
                 border-radius: 50%;
+                box-shadow: 0px 5px 10px darken($primary, 10);
                 width: 3.5em;
                 height: 3.5em;
                 @include flex(row, center, center);
                 text-decoration: none;
+                transition: .3s;
+                &:hover {
+                    box-shadow: 0px 2px 2px darken($primary, 10);
+                }
                 & i {
                     font-size: 1.7em;
                     color: $font-primary;
@@ -87,7 +110,7 @@ nav {
 /* ---------------- QUOTE ----------------*/
 .quote {
     padding: 3em 12em;
-    background-color: lighten($primary, 10);
+    background-color: transparent;
     height: 5em;
     font-size: 1.6em;
     font-style: italic;
@@ -99,6 +122,7 @@ nav {
 /* ---------------- SKILLS ----------------*/
 .skills {
     background-color: $primary;
+    border-radius: 10px 10px 0 0;
     padding-bottom: 0;
     position: relative;
     @include flex(row, space-between, center);
@@ -106,21 +130,12 @@ nav {
     & .plus-infos {
         width: 100%;
         @include flex(row, space-between, flex-start);
-        &__lang {
+        &__fr, &__eng {
             width: 50%;
-            &__fr, &__eng {
-                padding: 1em 0;
-                & .title {
-                    @include title(2em, 500, $font-primary);
-                } 
-            }
-        }
-        &__hobb {
             padding: 1em 0;
-            width: 50%;
             & .title {
                 @include title(2em, 500, $font-primary);
-            }
+            } 
         }
     }
     &__block{
@@ -151,6 +166,8 @@ nav {
 .exp {
     padding-top: 15em;
     background-color: lighten($primary, 10);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 5px 10px darken($primary, 10);
     @include flex(column, flex-start, flex-start);
     &__title {
         @include title(3em, 600, $font-primary);
@@ -159,6 +176,9 @@ nav {
         @include flex(row, space-between, flex-start);
         &__diploma, &__internship, &__pro {
             width: 33%;
+            &__title {
+                @include title(2em, 300, $blue);
+            }
         }
     }
     
