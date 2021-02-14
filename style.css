@@ -19,13 +19,13 @@ body {
 }
 
 .middot {
-  color: #2c74c2;
+  color: #3880ce;
   padding: 0 0.5em;
   font-size: 1.2em;
 }
 
 /* ----------------- NAV ----------------*/
-nav {
+.nav {
   height: 7em;
   background-color: transparent;
   display: flex;
@@ -33,15 +33,17 @@ nav {
   justify-content: center;
   align-items: center;
 }
-nav div {
+.nav__btn {
   padding: 0.5em 2em;
+  color: #ebebeb;
+  text-decoration: none;
   font-size: 1.2em;
   font-weight: 200;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
-nav div:hover {
+.nav__btn:hover {
   background-color: #ebebeb48;
   box-shadow: 0px 5px 10px #171b24;
 }
@@ -83,7 +85,7 @@ nav div:hover {
   align-items: center;
 }
 .presentation__content__social__link {
-  background-image: linear-gradient(45deg, #2c74c2, #810083);
+  background-image: linear-gradient(45deg, #3880ce, #810083);
   border-radius: 50%;
   box-shadow: 0px 5px 10px #171b24;
   width: 3.5em;
@@ -120,7 +122,7 @@ nav div:hover {
 
 /* ---------------- SKILLS ----------------*/
 .skills {
-  background-color: #2b3343;
+  background-color: #353f53;
   border-radius: 10px 10px 0 0;
   padding-bottom: 0;
   position: relative;
@@ -132,20 +134,16 @@ nav div:hover {
 }
 .skills .plus-infos {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.skills .plus-infos__fr, .skills .plus-infos__eng {
-  width: 50%;
   padding: 1em 0;
 }
-.skills .plus-infos__fr .title, .skills .plus-infos__eng .title {
+.skills .plus-infos__title {
   font-size: 2em;
   font-weight: 500;
   color: #ebebeb;
   padding-bottom: 0.5em;
+}
+.skills .plus-infos__detail {
+  font-size: 1.2em;
 }
 .skills__block {
   width: 100%;
@@ -164,6 +162,7 @@ nav div:hover {
   padding: 3em;
   border: none;
   border-radius: 10px;
+  box-shadow: 3px 3px 10px #171b24;
 }
 .skills__block__tech div, .skills__block__graph div, .skills__block__soft div {
   display: flex;
@@ -174,7 +173,7 @@ nav div:hover {
 .skills__block__tech .title, .skills__block__graph .title, .skills__block__soft .title {
   font-size: 2.5em;
   font-weight: 700;
-  color: #2c74c2;
+  color: #3880ce;
   padding-bottom: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -182,7 +181,7 @@ nav div:hover {
 /* ------------- EXPERIENCE ----------------*/
 .exp {
   padding-top: 12em;
-  background-color: #3f4b62;
+  background-color: #2b3343;
   border-radius: 0 0 10px 10px;
   box-shadow: 0px 5px 10px #171b24;
   display: flex;
@@ -216,8 +215,10 @@ nav div:hover {
   padding: 1em 0;
 }
 .exp__content__diploma__block .date, .exp__content__internship__block .date, .exp__content__pro__block .date {
-  color: #2c74c2;
+  font-size: 1.2em;
   font-weight: 500;
+  color: #3880ce;
+  padding-bottom: 0.5em;
 }
 .exp__content__diploma__block .activity, .exp__content__internship__block .activity, .exp__content__pro__block .activity {
   display: flex;

@@ -14,17 +14,17 @@
 <body>
 
     <!-- NAVIGATION -->
-    <nav>
-        <div class="nav__skills">Skills</div>
-        <div class="nav__exp">Experience</div>
-        <div class="nav__portfolio">Portfolio</div>
-        <div class="nav__contact">Contact</div>
+    <nav class="nav">
+        <a id="btnSkills" class="nav__btn" href="#skills">Skills</a>
+        <a id="btnExp" class="nav__btn" href="#exp">Experience</a>
+        <a id="btnPortfolio" class="nav__btn" href="#portfolio">Portfolio</a>
+        <a id="btnContact" class="nav__btn" href="#contact">Contact</a>
     </nav>
 
     <!-- EACH ARTICLE -->
     <main>
 
-        <article class="presentation">
+        <section class="presentation">
             <img class="presentation__img" src="images/photo1.jpg" alt="">
             <div class="presentation__content">
                 <h1 class="presentation__content__h1">Tanya Leenders</h1>
@@ -47,23 +47,18 @@
                     </a>
                 </div>
             </div>
-        </article>
+        </section>
 
-        <article class="quote">
+        <section id="" class="quote">
             I’m a motivated young woman, infographist and web developer. 
             I’m seeking opportunities to make me grow in my job and personnal life.
-        </article>
+        </section>
 
-        <article class="skills">
+        <section id="skills" class="skills">
             <div class="plus-infos">
-                <div class="plus-infos__fr">
-                    <p class="title">French</p>
-                    <p class="detail">Native Language</p>
-                </div>
-                <div class="plus-infos__eng">
-                    <p class="title">English</p>
-                    <p class="detail">Full professionnal capacity</p>
-                </div>
+                <p class="plus-infos__title">Languages</p>
+                <p class="plus-infos__detail">French is my native language.</p>
+                <p class="plus-infos__detail">I am proficient in English in a professionnal environment.</p>
             </div>
 
             <div class="skills__block">
@@ -97,11 +92,11 @@
                     <div> <div class="middot">&middot;</div> Solution Mindset</div>
                 </div>
             </div>
-        </article>
+        </section>
 
         
 
-        <article class="exp">
+        <section id="exp" class="exp">
             <div class="exp__title">Experience</div>
             <div class="exp__content">
                 <div class="exp__content__diploma">
@@ -144,11 +139,11 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
 
-        <article class="portfolio">
+        <section id="portfolio" class="portfolio">
             
-        </article>
+        </section>
 
     </main>
 

@@ -1,6 +1,6 @@
 $primary: #2b3343;
 $font-primary: #ebebeb;
-$blue: #2c74c2;
+$blue: #3880ce;
 $purple: #810083;
 
 @mixin flex($direction, $content, $items) {
@@ -24,7 +24,7 @@ $purple: #810083;
 body {
     color: $font-primary;
     font-family: "Poppins", sans-serif;
-    background-image: url(../images/purple-bg.jpg);
+    background-image: url(images/purple-bg.jpg);
     background-attachment: fixed;
     background-size: cover;
     backdrop-filter: blur(20px);
@@ -41,12 +41,14 @@ body {
 }
 
 /* ----------------- NAV ----------------*/
-nav {
+.nav {
     height: 7em;
     background-color: transparent;
     @include flex(row, center, center);
-    & div {
+    &__btn {
         padding: 0.5em 2em;
+        color: $font-primary;
+        text-decoration: none;
         font-size: 1.2em;
         font-weight: 200;
         border-radius: 10px;
@@ -121,7 +123,7 @@ nav {
 
 /* ---------------- SKILLS ----------------*/
 .skills {
-    background-color: $primary;
+    background-color: lighten($primary, 5);
     border-radius: 10px 10px 0 0;
     padding-bottom: 0;
     position: relative;
@@ -129,13 +131,12 @@ nav {
     flex-wrap: wrap;
     & .plus-infos {
         width: 100%;
-        @include flex(row, space-between, flex-start);
-        &__fr, &__eng {
-            width: 50%;
-            padding: 1em 0;
-            & .title {
-                @include title(2em, 500, $font-primary);
-            } 
+        padding: 1em 0;
+        &__title {
+            @include title(2em, 500, $font-primary);
+        } 
+        &__detail {
+            font-size: 1.2em;
         }
     }
     &__block{
@@ -151,6 +152,7 @@ nav {
             padding: 3em;
             border: none;
             border-radius: 10px;
+            box-shadow: 3px 3px 10px darken($primary, 10);
             & div {
                 @include flex(row, flex-start, flex-start);
             }
@@ -165,7 +167,7 @@ nav {
 /* ------------- EXPERIENCE ----------------*/
 .exp {
     padding-top: 12em;
-    background-color: lighten($primary, 10);
+    background-color: $primary;
     border-radius: 0 0 10px 10px;
     box-shadow: 0px 5px 10px darken($primary, 10);
     @include flex(column, flex-start, flex-start);
@@ -183,8 +185,7 @@ nav {
             &__block {
                 padding: 1em 0;
                 & .date {
-                    color: $blue;
-                    font-weight: 500;
+                    @include title(1.2em, 500, $blue);
                 }
                 & .activity {
                     @include flex(row, flex-start, flex-start);
