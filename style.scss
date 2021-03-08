@@ -1,7 +1,8 @@
-$primary: #2b3343;
+$primary: #46526b;
 $font-primary: #ebebeb;
+$font-secondary: #38435c;
 $blue: #3880ce;
-$purple: #810083;
+$purple: #a813aa;
 
 @mixin flex($direction, $content, $items) {
     display: flex;
@@ -24,33 +25,34 @@ $purple: #810083;
 body {
     color: $font-primary;
     font-family: "Poppins", sans-serif;
-    background-image: url(images/purple-bg.jpg);
+    font-size: 62.5%;
+    background-image: url(images/blue2-bg.jpg);
     background-attachment: fixed;
     background-size: cover;
     backdrop-filter: blur(20px);
-    padding: 0 3em;
+    padding: 0 3rem 2rem 3rem;
     // This creates a blurred fixed background to my content
 }
 .presentation, .skills, .exp, .portfolio {
-    padding: 4em 8em;
+    padding: 3rem 5rem;
 }
 .middot {
     color: $blue;
-    padding: 0 0.5em;
-    font-size: 1.2em;
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
 }
 
 /* ----------------- NAV ----------------*/
 .nav {
-    height: 7em;
     background-color: transparent;
     @include flex(row, center, center);
     &__btn {
-        padding: 0.5em 2em;
-        color: $font-primary;
+        margin: 1.5rem 0;
+        padding: 0.5rem 2rem;
+        color: $font-secondary;
         text-decoration: none;
-        font-size: 1.2em;
-        font-weight: 200;
+        font-size: 1.1rem; 
+        font-weight: 300;
         border-radius: 10px;
         cursor: pointer;
         transition: .3s;
@@ -63,20 +65,20 @@ body {
 
 /* ------------- PRESENTATION ----------------*/
 .presentation {
-    height: 45em;
+    height: auto;
     background-color: $primary;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 10px;
     box-shadow: 0px 5px 10px darken($primary, 10);
     @include flex(row, space-between, center);
     &__img{
         width: 45%;
+        border-radius: 10px;
+        max-width: 700px;
     }
     &__content { 
-        width: 45%;
+        width: 50%;
         &__h1 {
-            font-size: 4em;
+            font-size: 3rem;
             font-weight: 500;
             text-transform: uppercase;
         }
@@ -84,39 +86,39 @@ body {
             font-size: 2.5em;
             font-weight: 300;
         }
-        &__social {
-            padding: 2em 0;
-            width: 60%;
-            @include flex(row, space-between, center);
-            &__link {
-                background-image: linear-gradient(45deg, $blue, $purple);
-                border-radius: 50%;
-                box-shadow: 0px 5px 10px darken($primary, 10);
-                width: 3.5em;
-                height: 3.5em;
-                @include flex(row, center, center);
-                text-decoration: none;
-                transition: .3s;
-                &:hover {
-                    box-shadow: 0px 2px 2px darken($primary, 10);
-                }
-                & i {
-                    font-size: 1.7em;
-                    color: $font-primary;
-                }
-            }
+    }
+}
+.social {
+    padding: 2rem 0;
+    width: 50%;
+    @include flex(row, space-between, center);
+    &__link {
+        background-image: linear-gradient(45deg, $blue, $purple);
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px darken($primary, 10);
+        width: 3rem;
+        height: 3rem;
+        @include flex(row, center, center);
+        text-decoration: none;
+        transition: .3s;
+        &:hover {
+            box-shadow: 0px 2px 2px darken($primary, 10);
+        }
+        & i {
+            font-size: 1.3rem;
+            color: $font-primary;
         }
     }
 }
 
 /* ---------------- QUOTE ----------------*/
 .quote {
-    padding: 3em 12em;
+    color: $font-secondary;
     background-color: transparent;
-    height: 5em;
-    font-size: 1.6em;
+    padding: 5rem 10rem;
+    font-size: 1.3rem;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 600;
     @include flex(row, center, center);
     text-align: center;
 }
@@ -126,17 +128,14 @@ body {
     background-color: lighten($primary, 5);
     border-radius: 10px 10px 0 0;
     padding-bottom: 0;
-    position: relative;
-    @include flex(row, space-between, center);
-    flex-wrap: wrap;
+    @include flex(column, space-between, flex-start);
     & .plus-infos {
-        width: 100%;
-        padding: 1em 0;
+        padding-top: 1rem;
         &__title {
-            @include title(2em, 500, $font-primary);
+            @include title(1.5rem, 600, $font-primary);
         } 
         &__detail {
-            font-size: 1.2em;
+            font-size: 1rem;
         }
     }
     &__block{
@@ -145,19 +144,20 @@ body {
         top: 7em;
         @include flex(row, space-between, center);
         &__tech, &__graph, &__soft {
-            line-height: 2.3em;
-            height: 25em;
-            width: 20em;
+            line-height: 1.7rem;
+            height: 20rem;
+            width: 25%;
             background-color: darken($primary, 3);
-            padding: 3em;
+            padding: 2rem;
             border: none;
             border-radius: 10px;
             box-shadow: 3px 3px 10px darken($primary, 10);
-            & div {
+            & p {
                 @include flex(row, flex-start, flex-start);
+                font-size: 1rem; 
             }
             & .title {
-                @include title(2.5em, 700, $blue);
+                @include title(1.7rem, 700, $blue);
                 padding-bottom: 0.5em;
             }
         } 
@@ -166,31 +166,132 @@ body {
 
 /* ------------- EXPERIENCE ----------------*/
 .exp {
-    padding-top: 12em;
+    padding-top: 8rem;
     background-color: $primary;
     border-radius: 0 0 10px 10px;
     box-shadow: 0px 5px 10px darken($primary, 10);
     @include flex(column, flex-start, flex-start);
     &__title {
-        @include title(3em, 600, $font-primary);
+        @include title(1.7rem, 600, $font-primary);
     }
     &__content {
-        @include flex(row, space-between, flex-start);
+        display: flex;
+        flex-wrap: wrap;
+        &__diploma {
+            width: 20%;
+        }
+        &__internship, &__pro {
+            width: 35%;
+        }
         &__diploma, &__internship, &__pro {
-            width: 33%;
+            margin: 1rem;
             &__title {
-                @include title(2em, 300, $font-primary);
+                @include title(1.4rem, 300, $font-primary);
                 font-style: italic;
             }
             &__block {
-                padding: 1em 0;
+                padding: 1rem 0;
+                font-size: 0.9rem;
                 & .date {
-                    @include title(1.2em, 500, $blue);
+                    @include title(1.1rem, 500, $blue);
                 }
                 & .activity {
                     @include flex(row, flex-start, flex-start);
                 }
             }
         }
+    }
+}
+
+/* ---------------- PORTFOLIO ----------------*/
+.portfolio {
+    padding: 3rem 0;
+    color: $font-secondary;
+    &__title {
+        text-transform: uppercase;
+        @include title(1.7rem, 600, $font-secondary);
+        padding-top: 3rem;
+    }
+}
+.card {
+    margin: 4rem 0;
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    transform-style: preserve-3d;
+    perspective: 4000px;
+    transition: .5s;
+    color: $font-primary;
+    &:hover .card__front {
+        transform: rotateX(180deg);
+    }
+    &:hover .card__back {
+        transform: rotateX(0deg);
+    }
+    &__front {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px darken($primary, 10);
+        @include flex(row, center,center);
+        position: absolute;
+        backface-visibility: hidden;
+        transition: .5s;
+        
+    }
+    &__back {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px darken($primary, 10);
+        position: absolute;
+        @include flex(column, center, flex-start);
+        background-color: lighten($primary, 5);
+        backface-visibility: hidden;
+        transform: rotateX(-180deg);
+        transition: .5s;
+        &__techno, &__duration, &__text {
+            font-size: 1.1rem;
+            margin: 1rem 2rem;
+        }
+        & em {
+            font-size: 1.3rem;
+        }
+        & a {
+            color: $blue;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+    &__title {
+        width: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+}    
+.front-codepen1 { background-image: linear-gradient(#475577c4, #475577c4), url("./images/codepen1.png"); }
+.front-codepen2 { background-image: linear-gradient(#475577c4, #475577c4), url("./images/codepen2.png"); }
+.front-forum { background-image: linear-gradient(#475577c4, #475577c4), url("./images/forum.png"); }
+.front-restau { background-image: linear-gradient(#475577c4, #475577c4), url("./images/restaurant.png"); }
+.front-mwenbwa { background-image: linear-gradient(#475577c4, #475577c4), url("./images/mwenbwa.png"); }
+.front-codepen1, .front-codepen2, .front-forum, .front-restau, .front-mwenbwa {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ----------------- FOOTER ------------------ */
+footer {
+    padding: 2rem;
+    background-color: $primary;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px darken($primary, 10);
+    @include flex(column, center, center);
+    & .social {
+        width: 100%;
+    }
+    & .sources {
+        font-size: 0.9rem;
     }
 }
