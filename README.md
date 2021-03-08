@@ -14,4 +14,4 @@ Curriculum Vitae and Portfolio
 + JavaScript
 + AOS Library
 
-[Here's the url](https://tanya-amber-l/)
+[Here's the url](https://tanya-amber-l.github.io/Tanya-Leenders/)
