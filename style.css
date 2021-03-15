@@ -12,10 +12,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 0 3rem 2rem 3rem;
 }
 
-.presentation, .skills, .exp, .portfolio {
+.presentation, .skills, .exp {
   padding: 3rem 5rem;
 }
 
@@ -74,7 +75,7 @@ body {
   text-transform: uppercase;
 }
 .presentation__content__h2 {
-  font-size: 2.5em;
+  font-size: 2.3em;
   font-weight: 300;
 }
 
@@ -306,7 +307,7 @@ body {
   width: 100%;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 600;
 }
 
@@ -347,8 +348,56 @@ footer {
   align-items: center;
 }
 footer .social {
-  width: 100%;
+  padding-bottom: 3rem;
+  width: 80%;
 }
 footer .sources {
   font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 1280px) {
+  .presentation__content__h1 {
+    font-size: 2.5rem;
+  }
+
+  .presentation, .skills, .exp {
+    padding: 3rem 4rem;
+  }
+
+  .social {
+    width: 90%;
+  }
+  .social__link i {
+    font-size: 1.1rem;
+  }
+
+  .quote {
+    padding: 5rem;
+  }
+
+  .exp {
+    padding-top: 5rem;
+  }
+
+  .exp__content__diploma {
+    width: 30%;
+  }
+  .exp__content__internship {
+    width: 55%;
+  }
+  .exp__content__pro {
+    width: 100%;
+  }
+
+  .skills__block {
+    flex-direction: column;
+  }
+  .skills__block__tech, .skills__block__graph, .skills__block__soft {
+    height: auto;
+    width: 80%;
+    margin: 0.5rem;
+  }
+  .skills__block__tech .title, .skills__block__graph .title, .skills__block__soft .title {
+    text-align: center;
+  }
 }
