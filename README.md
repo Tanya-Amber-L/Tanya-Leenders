@@ -11,7 +11,9 @@ Curriculum Vitae and Portfolio
 
 + HTML
 + SCSS
-+ JavaScript
 + AOS Library
+
+### Responsive
+Portfolio is responsive till tablet size.
 
 [Here's the url](https://tanya-amber-l.github.io/Tanya-Leenders/)
